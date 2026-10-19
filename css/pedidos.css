@@ -1,0 +1,269 @@
+
+/* ==========================================
+   TECHSOLUTIONS - GESTIÓN DE PEDIDOS
+========================================== */
+
+.orders-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.orders-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.orders-search input {
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    min-width: 240px;
+    font-size: 14px;
+    outline: none;
+}
+
+.orders-search input:focus {
+    border-color: #2563eb;
+}
+
+.btn-order-search,
+.btn-order-clear,
+.btn-new-order,
+.btn-view-order {
+    display: inline-block;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-order-search {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-order-search:hover {
+    background: #1d4ed8;
+}
+
+.btn-order-clear {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.btn-new-order {
+    background: #16a34a;
+    color: white;
+}
+
+.btn-new-order:hover {
+    background: #15803d;
+}
+
+.btn-view-order {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-view-order:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 700px) {
+
+    .orders-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .orders-search input {
+        width: 100%;
+    }
+
+    .orders-search {
+        align-items: stretch;
+    }
+
+}
+
+/* FORMULARIO DE PEDIDOS */
+
+.pedido-producto {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: end;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.pedido-producto select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+}
+
+.btn-remove-product {
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    cursor: pointer;
+    margin-bottom: 22px;
+}
+
+.btn-remove-product:hover {
+    background: #b91c1c;
+}
+
+.pedido-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 25px;
+    background: #eff6ff;
+    border-radius: 10px;
+}
+
+.pedido-total h1 {
+    color: #1d4ed8;
+    font-size: 28px;
+}
+
+@media (max-width: 800px) {
+    .pedido-producto {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-remove-product {
+        margin-bottom: 0;
+    }
+
+    .pedido-total {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* MENSAJE DE PEDIDO REGISTRADO */
+
+.order-success {
+    background: #dcfce7;
+    color: #166534;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* =====================================
+   DETALLE DEL PEDIDO
+===================================== */
+
+.order-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.order-info-item {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.order-info-item span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.order-info-item strong {
+    color: #0f172a;
+    font-size: 16px;
+}
+
+.order-table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.order-detail-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eff6ff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.order-detail-total span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.order-detail-total strong {
+    color: #1d4ed8;
+    font-size: 26px;
+}
+
+.order-detail-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+@media (max-width: 700px) {
+    .order-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-detail-total {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .order-detail-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media print {
+    .sidebar,
+    .order-detail-actions {
+        display: none !important;
+    }
+
+    .main {
+        margin: 0 !important;
+        padding: 15px !important;
+        width: 100% !important;
+    }
+
+    body {
+        background: white !important;
+    }
+}

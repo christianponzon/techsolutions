@@ -1,0 +1,101 @@
+
+/* =====================================
+   TECHSOLUTIONS - INVENTARIO
+===================================== */
+
+.inventory-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.inventory-toolbar h2 {
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.inventory-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-movement,
+.btn-history {
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-movement {
+    background: #2563eb;
+}
+
+.btn-movement:hover {
+    background: #1d4ed8;
+}
+
+.btn-history {
+    background: #475569;
+}
+
+.btn-history:hover {
+    background: #334155;
+}
+
+.inventory-warning {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.inventory-danger {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.inventory-ok {
+    background: #dcfce7;
+    color: #166534;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .inventory-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inventory-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+/* SELECTORES DE INVENTARIO */
+
+.form-field select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: #334155;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-field select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}

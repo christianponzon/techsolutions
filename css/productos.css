@@ -1,0 +1,211 @@
+
+/* ======================================
+   TECHSOLUTIONS - PRODUCTOS
+====================================== */
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-form input {
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    min-width: 240px;
+    outline: none;
+}
+
+.search-form input:focus {
+    border-color: #2563eb;
+}
+
+.btn-search,
+.btn-add,
+.btn-edit,
+.btn-delete,
+.btn-clear {
+    display: inline-block;
+    padding: 11px 16px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-search {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-add {
+    background: #16a34a;
+    color: white;
+}
+
+.btn-edit {
+    background: #f59e0b;
+    color: white;
+}
+
+.btn-delete {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-clear {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.btn-search:hover {
+    background: #1d4ed8;
+}
+
+.btn-add:hover {
+    background: #15803d;
+}
+
+.btn-edit:hover {
+    background: #d97706;
+}
+
+.btn-delete:hover {
+    background: #b91c1c;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.actions form {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form input {
+        width: 100%;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+    }
+}
+
+/* FORMULARIO DE PRODUCTOS */
+
+.product-form {
+    max-width: 850px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.form-field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.error-message {
+    padding: 14px;
+    margin-bottom: 20px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* NOTA DE STOCK */
+
+.stock-note {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background: #eff6ff;
+    padding: 12px 15px;
+    border-left: 4px solid #2563eb;
+    border-radius: 5px;
+}
+
+/* MENSAJES DE CONFIRMACIÓN */
+
+.alert-success {
+    background: #dcfce7;
+    color: #166534;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
